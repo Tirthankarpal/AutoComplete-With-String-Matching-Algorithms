@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autocomplete with Algorithms</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Autocomplete with Algorithms</h1>
+    <p>Enter Name of City To Search</p>
+    <p id="city-count">Loading city data...</p>
+    <input type="text" id="autocomplete-input" 
+      placeholder="Start typing..." 
+      oninput="window.autocomplete()">
+    <select id="algorithm">
+      <option value="kmp">KMP Algorithm</option>
+      <option value="z">Z Algorithm</option>
+      <option value="hashing">String Hashing</option>
+      <option value="trie">Trie</option>
+    </select>
+    <div id="time-taken"></div>
+    <ul id="suggestions"></ul>
+    <div class="average-times-container">
+      <h2>Average Search Times</h2>
+      <div class="average-times">
+        <p>KMP: <span id="kmp-average">Not used yet</span></p>
+        <p>Z: <span id="z-average">Not used yet</span></p>
+        <p>Hashing: <span id="hashing-average">Not used yet</span></p>
+        <p>Trie: <span id="trie-average">Not used yet</span></p>
+      </div>
+      <canvas id="average-times-chart" width="400" height="300"></canvas>
+    </div>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>
