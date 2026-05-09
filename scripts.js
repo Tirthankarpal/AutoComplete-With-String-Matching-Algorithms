@@ -392,16 +392,14 @@ function initializeChart() {
         },
       },
       scales: {
-        yAxes: [
-          {
-            ticks: {
-              beginAtZero: true,
-              callback: function (value) {
-                return value + " ms";
-              },
+        y: {
+          ticks: {
+            beginAtZero: true,
+            callback: function (value) {
+              return value + " ms";
             },
           },
-        ],
+        },
       },
     },
   });
